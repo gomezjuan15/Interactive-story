@@ -10,6 +10,20 @@ public class Page {
     private Choice mChoice1;
     private Choice mChoice2;
 
+    private boolean mIsFinal = false;
+
+    public Page(int imageId, String text) {
+        this(imageId, text, null, null);
+        mIsFinal = true;
+    }
+
+    public Page(int imageId, String text, Choice choice1, Choice choice2) {
+        mImageId = imageId;
+        mText = text;
+        mChoice1 = choice1;
+        mChoice2 = choice2;
+    }
+
     public int getImageId() {
         return mImageId;
     }
@@ -40,5 +54,13 @@ public class Page {
 
     public void setChoice2(Choice choice2) {
         mChoice2 = choice2;
+    }
+
+    public boolean isFinal() {
+        return mIsFinal;
+    }
+
+    public void setFinal(boolean isFinal) {
+        mIsFinal = isFinal;
     }
 }

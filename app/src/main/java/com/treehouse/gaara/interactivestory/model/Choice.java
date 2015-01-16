@@ -5,7 +5,19 @@ package com.treehouse.gaara.interactivestory.model;
  */
 public class Choice {
 
-    private String text;
+    private String mText;
     private int mNextPage;
 
+    public Choice(String text, int nextPage) {
+        mText = text;
+        mNextPage = nextPage;
+    }
+
+    public String getText() {
+        return mText;
+    }
+
+    public int getNextPage() {
+        return mNextPage;
+    }
 }
